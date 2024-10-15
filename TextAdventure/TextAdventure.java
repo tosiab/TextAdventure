@@ -29,7 +29,7 @@ public class TextAdventure
     // ADD CODE HERE
     
     // describe the starting situation. Feel free to change this
-    System.out.println("You wake up to find yourself on the edge of a shadowy forest with the sun nearly set. \nYou see what looks like a city in the distance. \nWhat would you like to do? \ncity: go towards the city\nforest: turn around and re-enter the forest\nnap: go back to sleep\n" + ourHero.getName() + ": ");
+    System.out.println("You wake up to find yourself in the sky on the battlebus. \n With a pickaxe in hand, and a glider on your back, you look to the map ahead. \nWhere we dropping? \ntilted towers: a blooming city, filled with loot and many enemies.\nsalty springs: calm suburbs... that is until everyone drops.\nquit: leave the game\n" + ourHero.getName() + ": ");
 
     // get user input and go to the appropriate zone based on their input
     // ADD CODE HERE
@@ -57,7 +57,7 @@ public class TextAdventure
 
     // describe the area/situation to the user. 
     // Give them options for choices.
-    // ADD CODE HERE
+    // ADD CODE HERE 
 
     // Take action or go to another zone based on their choice
     // ADD CODE HERE
