@@ -19,20 +19,24 @@ public class TextAdventure
   {
     String input;
     // start of adventure. You can change this if you like
-    console.setImage("distantcity.jpg");
+    console.setImage("bb2.png");
 
     // ask the user for their name.
     System.out.println("What is your name?\n");
     input = inScanner.nextLine();
 
     // Change ourHero's name
+    
     // ADD CODE HERE
     
     // describe the starting situation. Feel free to change this
     System.out.println("You wake up to find yourself in the sky on the battlebus. \n With a pickaxe in hand, and a glider on your back, you look to the map ahead. \nWhere we dropping? \ntilted towers: a blooming city, filled with loot and many enemies.\nsalty springs: calm suburbs... that is until everyone drops.\nquit: leave the game\n" + ourHero.getName() + ": ");
 
     // get user input and go to the appropriate zone based on their input
+    System.out.println("What will you choose?\n");
+    String zone = inScanner.nextLine();
     // ADD CODE HERE
+    
 
   }
 
