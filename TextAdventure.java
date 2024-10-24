@@ -59,27 +59,27 @@ public class TextAdventure
     // change image
     console.setImage("tilted.jpg");
     // ADD CODE HERE
-    System.out.println("You land on top of a building. You descend down the stairs and find a chest. Inside you find a");
+    System.out.print("You land on top of a building. You descend down the stairs and find a chest. Inside you find a");
     int rarity = (int)(Math.random()*6)+1;
     int wc;
     if(rarity == 1){
-      System.out.print("Common gun.");
+      System.out.println(" Common gun.");
       wc = 1;
     }
     if(rarity == 2){
-      System.out.print("n Uncommon gun.");
+      System.out.println("n Uncommon gun.");
       wc = 2;
     }
     if(rarity == 3){
-      System.out.print("Rare gun.");
+      System.out.println(" Rare gun.");
       wc = 3;
     }
     if(rarity == 4){
-      System.out.print("n Epic gun.");
+      System.out.println("n Epic gun.");
       wc = 5;
     }
     if(rarity == 5){
-      System.out.print("Legendary gun.");
+      System.out.println(" Legendary gun.");
       wc = 6;
     }
     System.out.println("The storm begins closing and you have to move. Where will you go?\n1. dusty divot\n2. salty springs\n");
