@@ -168,6 +168,17 @@ public class TextAdventure
 
   private void enterZone3()
   {
+    console.setImage("shafts.jpg");
+    System.out.println("You arrive at shifty shafts and notice many people landing above you.");
+    System.out.println("You notice a loot drop on your mini map. What would you like to do?\n1. Go to the loot drop\n2. Go to salty springs.\n");
+    String input = inScanner.nextLine();
+    if(input.equals("1")){
+      System.out.println("You venture off to the loot drop. As you are opening it, someone snipes you from a nearby hill and eliminates you.");
+      gameEndLose();
+    }
+    if(input.equals("2")){
+      enterZone6();
+    }
     // change image
     // ADD CODE HERE
 
@@ -182,6 +193,42 @@ public class TextAdventure
 
   private void enterZone4()
   {
+    console.setImage("lake.jpg");
+    System.out.println("As your flying over the lake you have two landing options.\n1. The lake\n2. The house\n");
+    String input = inScanner.nextLine();
+    if(input.equals("1")){
+      System.out.println("Your fortnite character is very unathletic and cannot swim. You drown");
+      gameEndLose();
+    }
+    if(input.equals("2")){
+      System.out.println("You land on the roof and begin breaking into the house. Inside you find a variety of good weapons.");
+      System.out.println("Nobody else landed here, so you have two options.\n1. Camp out the rest of the game\n2. Move to a new location");
+      input = inScanner.nextLine();
+      if(input.equals("1")){
+        System.out.println("You got extremely lucky, and the final storm circle is at loot lake.");
+        System.out.println("You see the remaining player along the outskirts of the lake. How would you like to eliminate them?");
+        System.out.println("1. Snipe them\n2. Throw a boogie bomb and then pickaxe them\n");
+        input = inScanner.nextLine();
+        if(input.equals("1")){
+          System.out.println("You snipe them in the head and win!");
+          gameEndVic();
+        }
+        if(input.equals("2")){
+          System.out.println("You boogie bomb them and quickly swim over, just in time to eliminate them.");
+          gameEndVic();
+        }
+      }
+      else{
+        System.out.println("Where would you like to go?\n1. Dusty Divot\n2. Salty Springs\n");
+        input = inScanner.nextLine();
+        if(input.equals("1")){
+          enterZone5();
+        }
+        if(input.equals("2")){
+          enterZone6();
+        }
+      }
+    }
     // change image
     // ADD CODE HERE
 
@@ -197,6 +244,34 @@ public class TextAdventure
   private void enterZone5()
   {
     // change image
+    console.setImage("divot.jpg");
+    System.out.println("After a long journey, you finally make it to Dusty Divot. There are five players remaining.");
+    System.out.println("A few more players die and you spot the last player afar. Would you like to snipe them? (Yes or No)\n");
+    String Input = inScanner.nextLine();
+    if(Input.equals("Yes")||(Input.equals("yes"))){
+      int wc = (int)(Math.random()*2)+1;
+      System.out.println("You line up your shot ");
+      if(wc == 1){
+        System.out.println("and eliminate the player.");
+        gameEndVic();
+      }
+      else{
+        System.out.println("and miss. The player notices and begins shooting at you. In the heat of the moment you panic and get eliminated.");
+        gameEndLose();
+      }
+    }
+    if(Input.equals("No")||(Input.equals("no"))){
+      System.out.println("You slowly observe them as they walk around, looking for you. In your inventory you see a boogie bomb. Would you like to use it? (Yes or No)\n");
+      Input = inScanner.nextLine();
+      if(Input.equals("Yes")||(Input.equals("yes"))){
+        System.out.println("You hit them with the boogie bomb, and then snipe them.");
+        gameEndVic();
+      }
+      if(Input.equals("no")||(Input.equals("No"))){
+        System.out.println("While thinking, the other player spots you and snipes you. You get eliminated.");
+        gameEndLose();
+      }
+    }
     // ADD CODE HERE
 
     // describe the area/situation to the user. 
@@ -210,6 +285,27 @@ public class TextAdventure
 
   private void enterZone6()
   {
+    console.setImage("salty.jpg");
+    System.out.println("Upon arriving at Salty springs, you see many houses and a gas station. Which would you like to enter?\n1. Enter the house\n2. Enter the gas station\n");
+    String input =inScanner.nextLine();
+    if(input.equals("1")){
+      System.out.println("When you enter, someone pops out behind the stairs and shoots you. You get eliminated.");
+      gameEndLose();
+    }
+    if(input.equals("2")){
+      System.out.println("You enter the gas station and find a mending machine. Would you like to buy meds?(Yes or No)\n");
+      input = inScanner.nextLine();
+      if(input.equals("Yes")||(input.equals("yes"))){
+        System.out.println("You now have 150 health, giving you an advantage over other opponents.");
+        System.out.println("In the house across the street, you see the final player. You quickly rush into the house and fight him.\n Because you have extra health, you easily eliminate your opponent.");
+        gameEndVic();
+      }
+      if(input.equals("no")||(input.equals("No"))){
+        System.out.println("In the house across the street, you see the final player. You quickly rush into the house and fight him.\n Unfortunately the other player was smarter and decided to buy meds, therefore gaining extra health.");
+        System.out.println("You try to fight them, but in the end, they have more health and easily eliminate you.");
+        gameEndLose();
+      }
+    }
     // change image
     // ADD CODE HERE
 
